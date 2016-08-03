@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-bind</title>
+</head>
+
+<!-- ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。
+ -->
+<body ng-app="bindExample">
+
+<div ng-controller="ExampleController">
+  <!-- ng-model 指令把输入域的值绑定到应用程序变量 name。 -->
+  <label>Enter name: <input type="text" ng-model="name"></label><br>
+
+  <!-- ng-bind 指令把应用程序变量 name 绑定到某个的 innerHTML。 -->
+  <div>Hello <span ng-bind="name"></span>!</div>
+  <div>Hello <span>{{name}}!</span></div>
+</div>
+
+<script type="text/javascript" src="../lib/angular.js"></script>
+<script type="text/javascript" src="../script/bind-app.js"></script>
+</body>
+</html>
